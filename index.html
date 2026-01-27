@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>人生模拟器 - 平行宇宙</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🌌 人生模拟器 - 平行宇宙</h1>
+            <p class="subtitle">每个选择，都是一个新的宇宙</p>
+        </header>
+
+        <div id="game-screen">
+            <!-- 开始界面 -->
+            <div id="start-screen" class="screen active">
+                <div class="welcome">
+                    <h2>欢迎来到平行宇宙模拟器</h2>
+                    <p>在无尽的时空维度中，你将体验一段独特的人生旅程</p>
+                    <p>每个决策都会分裂出新的时间线，创造全新的平行宇宙</p>
+                    <p>从Web3.0时代到元宇宙，从加密货币到NFT</p>
+                    <p>不同的抉择，将导向截然不同的命运结局</p>
+                    <button id="start-btn" class="btn btn-primary">进入时空隧道</button>
+                </div>
+            </div>
+
+            <!-- 游戏界面 -->
+            <div id="game-screen-main" class="screen">
+                <!-- 属性面板 -->
+                <div class="stats-panel">
+                    <div class="stat-item">
+                        <span class="stat-icon">❤️</span>
+                        <span class="stat-label">健康</span>
+                        <div class="stat-bar">
+                            <div class="stat-fill health-fill"></div>
+                        </div>
+                        <span class="stat-value" id="health-value">50</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-icon">💰</span>
+                        <span class="stat-label">财富</span>
+                        <div class="stat-bar">
+                            <div class="stat-fill wealth-fill"></div>
+                        </div>
+                        <span class="stat-value" id="wealth-value">50</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-icon">🧠</span>
+                        <span class="stat-label">智慧</span>
+                        <div class="stat-bar">
+                            <div class="stat-fill wisdom-fill"></div>
+                        </div>
+                        <span class="stat-value" id="wisdom-value">50</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-icon">😊</span>
+                        <span class="stat-label">幸福</span>
+                        <div class="stat-bar">
+                            <div class="stat-fill happiness-fill"></div>
+                        </div>
+                        <span class="stat-value" id="happiness-value">50</span>
+                    </div>
+                </div>
+
+                <!-- 年龄和阶段 -->
+                <div class="age-display">
+                    <div class="age">年龄: <span id="age">0</span> 岁</div>
+                    <div class="stage">阶段: <span id="stage">出生</span></div>
+                </div>
+
+                <!-- 事件卡片 -->
+                <div class="event-card">
+                    <div class="event-title" id="event-title"></div>
+                    <div class="event-description" id="event-description"></div>
+                    <div class="choices" id="choices"></div>
+                </div>
+
+                <!-- 历史记录 -->
+                <div class="history-toggle">
+                    <button id="toggle-history" class="btn btn-secondary">查看历史记录</button>
+                </div>
+                <div id="history-panel" class="history-panel">
+                    <h3>你的人生轨迹</h3>
+                    <div id="history-list"></div>
+                </div>
+            </div>
+
+            <!-- 结局界面 -->
+            <div id="ending-screen" class="screen">
+                <div class="ending-content">
+                    <h2>人生终章</h2>
+                    <div class="ending-age">享年 <span id="final-age"></span> 岁</div>
+                    <div class="ending-title" id="ending-title"></div>
+                    <div class="ending-description" id="ending-description"></div>
+
+                    <div class="final-stats">
+                        <h3>最终属性</h3>
+                        <div class="final-stat-grid">
+                            <div class="final-stat">
+                                <span class="stat-icon">❤️</span>
+                                <span>健康: <span id="final-health"></span></span>
+                            </div>
+                            <div class="final-stat">
+                                <span class="stat-icon">💰</span>
+                                <span>财富: <span id="final-wealth"></span></span>
+                            </div>
+                            <div class="final-stat">
+                                <span class="stat-icon">🧠</span>
+                                <span>智慧: <span id="final-wisdom"></span></span>
+                            </div>
+                            <div class="final-stat">
+                                <span class="stat-icon">😊</span>
+                                <span>幸福: <span id="final-happiness"></span></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="ending-actions">
+                        <button id="restart-btn" class="btn btn-primary">重启人生</button>
+                        <button id="view-history-btn" class="btn btn-secondary">查看完整历程</button>
+                    </div>
+
+                    <div id="full-history" class="full-history"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="game.js"></script>
+</body>
+</html>
