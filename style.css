@@ -266,7 +266,7 @@ header h1 {
 /* 属性面板 */
 .stats-panel {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 15px;
     margin-bottom: 25px;
 }
@@ -343,6 +343,16 @@ header h1 {
 .happiness-fill {
     background: linear-gradient(90deg, #00ff00, #00ffaa);
     color: #00ff00;
+}
+
+.family-fill {
+    background: linear-gradient(90deg, #ff69b4, #ff1493);
+    color: #ff69b4;
+}
+
+.honor-fill {
+    background: linear-gradient(90deg, #ffa500, #ff8c00);
+    color: #ffa500;
 }
 
 .stat-value {
@@ -516,7 +526,7 @@ header h1 {
 
 .final-stat-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 15px;
 }
 
@@ -565,7 +575,7 @@ header h1 {
     }
 
     .stats-panel {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(2, 1fr);
     }
 
     .age-display {
